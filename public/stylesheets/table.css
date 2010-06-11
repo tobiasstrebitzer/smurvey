@@ -1,0 +1,125 @@
+/* Radiomatrix */
+table.radiomatrix {
+background: none repeat scroll 0 0 #FFFFFF;
+border-color: #DEDEDE #DEDEDE -moz-use-text-color;
+border-style: solid solid none;
+border-width: 1px 1px medium;
+margin: 12px 0 0.9em;
+width: 100%;
+}
+
+table.radiomatrix thead td, table.radiomatrix thead th {
+background-color: #E6E6E6;
+}
+
+table.radiomatrix td {
+border-left: 1px solid #CCCCCC;
+}
+table.radiomatrix thead td {
+font-size: 85%;
+padding: 10px 6px;
+}
+table.radiomatrix th, table.radiomatrix td {
+border-bottom: 1px solid #DEDEDE;
+}
+table.radiomatrix tbody th {
+padding: 8px;
+text-align: left;
+}
+table.radiomatrix tbody th label {
+color: #222222;
+font-size: 95%;
+font-weight: bold;
+}
+table.radiomatrix tbody tr:nth-child(even) td, table.radiomatrix tbody tr:nth-child(even) th {
+	background-color: #F5F5F5;
+}
+
+table.radiomatrix td.special {
+	color: #AAA;
+}
+
+table.radiomatrix tbody td.special {
+	background: #EEE;
+}
+
+/* dualoption */
+table.dualoption {
+	margin: 12px 0 0.9em;
+	width: 100%;
+}
+
+table.dualoption td.opt1, table.dualoption td.opt2 {
+	width: 128px;
+}
+
+table.dualoption td.question {
+	color: #222222;
+	font-size: 95%;
+	line-height: 135%;
+	padding: 5px 0 0.5em;
+	font-weight: bold;
+	text-align: left;
+}
+
+table.dualoption th.question-header {
+	background: #FFF;
+	border: none;
+}
+
+/* dualoption */
+table.textfield {
+	margin: 12px 0 0.9em;
+	width: 100%;
+}
+
+table.textfield td {
+	text-align: center;
+}
+
+table.textfield td.question {
+	color: #222222;
+	font-size: 95%;
+	line-height: 135%;
+	padding: 5px 0 0.5em;
+	font-weight: bold;
+	text-align: left;
+}
+
+table.textfield td.textfield input, table.textfield td.textfield {
+	font-size: 20px;
+}
+
+label.label-textfield {
+	display: inline;
+}
+
+/* Globals */
+table caption {
+color: #222222;
+font-size: 95%;
+line-height: 135%;
+padding: 5px 0 0.5em;
+font-weight: bold;
+text-align: left;
+}
+
+table input {
+margin: 2px 0;
+padding: 0;
+}
+
+table tbody td label {
+color: #565656;
+display: block;
+font-size: 85%;
+}
+
+table td {
+	padding: 4px 6px;
+	text-align: center;
+}
+
+table tbody tr:hover td, table tbody tr:hover th {
+	background-color: #FFFFCF;
+}

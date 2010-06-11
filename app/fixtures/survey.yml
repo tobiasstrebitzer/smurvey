@@ -1,0 +1,255 @@
+1:
+  text: 'Erreichbarkeit des Arbeitsplatzes (oder der Schule):'
+  help: Markieren Sie bitte den auf Sie zutreffenden Punkt auf der Skala
+  questions:
+    - text: 'Wo liegt vom Wohnort aus gesehen Ihr Arbeitsplatz (Schule oder Universität)?:'
+      type: radiomatrix
+      cols:
+        - Im selben Ortsteil<br/>(Umkreis ca. 1 km)
+        - Im selben Ort
+        - In einem nahen Nachbarort<br/>(im Umkreis bis 10km)
+        - In einem entfernten Ort<br/>(mehr als 10km)
+        - _Trifft für<br/>mich nicht zu
+      rows:
+        - Arbeitsplatz, Schule
+    - text: 'Wie einfach/schwierig ist es für Sie mit den folgenden Verkehrsmitteln den Arbeitsplatz, die Schule, die Universität zu erreichen?:'
+      type: radiomatrix
+      cols:
+        - Sehr schwierig
+        - |
+        - einfach
+      rows:
+        - mit dem Fahrrad
+        - mit dem Auto
+        - Mit öffentlichen Verkehrsmitteln
+2:
+  text: Bekanntheit des Angebots der öffentlichen Verkehrsmittel
+  firstwidth: 550
+  help: Markieren Sie bitte die auf Sie zutreffenden Ausprägung auf der Skala
+  questions: 
+    - text: Kennen Sie die Lage der nächsten Haltestelle der öffentlichen Verkehrsmittel bei...
+      type: radiomatrix
+      cols: 
+        - kenne ich nicht
+        - |
+        - teilweise
+        - |
+        - kenne ich genau
+      rows: 
+        - Wohnung, Haus
+        - Arbeitsplatz, Schule
+    - text: Wie detailliert kennen Sie das Liniennetz der öffentlichen Verkehrsmittel?
+      type: radiomatrix
+      cols:
+        - kenne ich nicht
+        - |
+        - teilweise
+        - |
+        - kenne ich im Detail
+      rows: 
+        - Die Linienverbindungen zwischen meinem Wohnort und meinem Arbeitsplatz bzw. Schule...
+        - Die Linien zu Zielen, die ich weniger oft besuche (Freizeit, Einkaufen)...
+        - Die 'Park and Ride'- Angebote der Bahn...
+    - text: Kennen Sie die Lage der nächsten Haltestelle der öffentlichen Verkehrsmittel bei...
+      type: radiomatrix
+      cols: 
+        - kenne ich nicht
+        - |
+        - teilweise
+        - |
+        - kenne ich genau
+      rows: 
+        - Einzeltickets
+        - Wochenkarten/Monatskarten
+        - Jahreskarten
+3:
+  text: Einstellung gegenüber öffentlichen Verkehrsmitteln
+  firstwidth: 550
+  help: Markieren Sie bitte, inwieweit Sie den folgenden Aussagen zustimmen.
+  questions: 
+    - type: radiomatrix
+      cols: 
+        - stimme nicht zu
+        - |
+        - neutral
+        - |
+        - stimme voll zu
+        - _Keine Angabe möglich
+      rows: 
+        - (s)Die öffentlichen Verkehrsmittel bieten ein gutes Preis/Leistungsverhältnis.
+        - (s)Die öffentlichen Verkehrsmittel sollten weiter ausgebaut werden.
+        - (s)Die Benützung der öffentlichen Verkehrsmittel ist ein Beitrag zum Umweltschutz.
+        - Linienbusse sind eine	komfortable Möglichkeit um von einem Ort zu einem anderen zu kommen.
+        - Die Bahn ist eine komfortable Möglichkeit um von einem Ort zu einem anderen zu kommen.
+        - Die Straßenbahn ist eine	komfortable Möglichkeit um von einem Ort zu einem anderen zu kommen.
+4:
+  text: Nutzung der öffentlichen Verkehrsmittel in den vergangenen acht Wochen
+  firstwidth: 400
+  questions: 
+    - text: Haben Sie in den vergangenen acht Wochen öffentliche Verkehrsmittel (Bahn, Bus, Straßenbahn) benutzt?
+      help: Bei "Nein" überspringen Sie bitte diese Frage und fahren Sie mit Frage {nexti} fort.
+      type: dualoption
+      opt1: Ja
+      opt2: Nein
+      skip_on: no
+      skip_group: notused
+    - text: Wenn Sie die letzten acht Wochen betrachten, wie oft haben Sie öffentliche Verkehrsmittel benutzt?
+      help: (Berücksichtigen Sie hier bitte alle Fahrten, auch die zu anderen Zielen außer zur Arbeit oder zur Schule)
+      group: notused
+      type: radiomatrix
+      cols: 
+        - täglich
+        - regelmäßig an Werktagen
+        - an 2-3 Tagen pro Woche
+        - einmal / Woche oder weniger
+        - nie
+      rows: 
+        - Fahrten mit den Bahn
+        - Fahrten mit dem Bus
+        - Fahrten mit der Straßenbahn
+    - text: Zu welchem Zweck haben Sie die öffentlichen Verkehrsmittel in den vergangenen acht Wochen benützt?
+      help: Markieren Sie bitte die auf Sie zutreffenden Ausprägung auf der Skala
+      group: notused
+      type: radiomatrix
+      cols: 
+        - regelmäßig
+        - oft
+        - gelegentlich
+        - sehr selten
+        - nie
+      rows: 
+        - Für Fahrten zum/vom Arbeitsplatz oder Schule
+        - Für Fahrten zu anderen Aktivitäten, z.B. Einkaufen, Freizeit
+    - text: Wo lagen die Fahrtziele in den vergangen acht Wochen?
+      help: Markieren Sie bitte die auf Sie zutreffenden Ausprägung auf der Skala
+      group: notused
+      type: radiomatrix
+      cols: 
+        - nur im Wohnort
+        - vorwiegend im Wohnort
+        - teils/teils
+        - vorwiegend in anderen Orten
+        - nun in anderen Orten
+      rows: 
+        - Die Ziele meiner Fahrten mit öffentlichen Verkehrsmitteln in den vergangenen acht Wochen lagen...
+    - text: Wie haben Sie die Qualität der öffentlichen Verkehrsmittel erlebt?
+      help: Markieren Sie bitte, inwieweit Sie den folgenden Aussagen zustimmen.
+      group: notused
+      type: radiomatrix
+      cols: 
+        - stimme nicht zu
+        - |
+        - stimme teilweise zu
+        - |
+        - stimme völlig zu
+      rows: 
+        - Die öffentlichen Verkehrsmittel sind ausreichend pünktlich.
+        - Die öffentlichen Verkehrsmittel sind in einem guten Zustand (Sauberkeit).
+        - Die Haltestellen und Bahnhöfe sind ausreichend groß und gut ausgestattet.
+        - Der Fahrkomfort in den öffentlichen Verkehrsmitteln ist gut.
+5:
+  text: Informationsquellen
+  help: Markieren Sie bitte die auf Sie zutreffenden Ausprägung auf der Skala
+  firstwidth: 400
+  questions:
+    - text: Wo würden Sie sich über Fahrplan, Preise oder Haltestellen der öffentlichen Verkehrsmittel informieren?
+      type: radiomatrix
+      cols:
+        - auf keinen Fall
+        - vielleicht
+        - wahrscheinlich
+        - sicher
+      rows:
+        - Internetseite des Anbieters
+        - Telefon-Auskunft des Anbieters
+        - Informationstafeln auf einer Haltestelle
+        - Bei Freunden, Bekannten
+6:
+  text: Gründe für die geringe Nutzung
+  firstwidth: 400
+  questions:
+    - text: Was sind die Gründe dafür, dass Sie die öffentlichen Verkehrsmittel nicht oder nicht öfter benutzen?
+      help: Markieren Sie bitte in welchem Ausmaß der jeweilige Grund auf Sie zutrifft.
+      type: radiomatrix
+      cols:
+        - trifft für mich<br/>nicht zu
+        - |
+        - |
+        - |
+        - |
+        - trifft für mich<br/>stark zu
+      rows:
+        - Langer Weg zur Haltestelle
+        - Schlechte Verbindung
+        - Zu wenig Komfort
+        - Tarife sind zu teuer
+        - öffentliche Verkehrsmittel sind überfüllt
+        - Einkäufe und Besorgungen sind umständlich
+        - Zu langsam
+        - Zeitlich zu unflexibel
+        - Unfreundliches Personal
+7:
+  text: Einige Angaben zu Ihrer Person
+  firstwidth: 600
+  questions:
+    - text: Geschlecht
+      type: dualoption
+      opt1: männlich
+      opt2: weiblich
+      combined: true
+    - text: Beruf/Haupttätigkeit
+      help: Markieren Sie bitte in welchem Ausmaß der jeweilige Grund auf Sie zutrifft.
+      type: radiolist
+      rows:
+        - 'Arbeiter(in), Angestellte(r), Beamter(in) Vollzeit'
+        - 'Arbeiter(in), Angestellte(r), Beamter(in) Teilzeit'
+        - 'Arbeiter(in), Angestellte(r), Beamter(in) Schichtarbeit'
+        - 'Unternehmer(in)'
+        - 'Schüler(in), Student(in)'
+        - 'Hausmann, Hausfrau'
+        - 'Pensionist(in)'
+        - 'Arbeitslos'
+    - text: Alter
+      type: textfield
+      class: validate[required,onlyNumber,length[2]]
+      max: 2
+      postfix: Jahre
+    - text: Wohnort
+      postfix: |
+      max: 16
+      type: textfield
+      class: validate[required,town]
+    - text: Postleitzahl
+      postfix: |
+      max: |
+      type: textfield
+      class: validate[required,onlyNumber,length[3,6]]
+      max: 6
+    - text: Ausbildung
+      help: Bitte kreuzen Sie die höchste abgeschlossene Ausbildung an.
+      type: radiolist
+      rows:
+        - Hochschule (Universität, Fachhochschule)
+        - Höhere Schule (Gymnasium, HTL, HAK, HBLA etc.)
+        - Mittlere Schule (Fachschule)
+        - Lehre
+        - Pflichtschule
+    - text: Familienstand
+      type: radiolist
+      rows:
+        - Verheiratet, Lebensgemeinschaft
+        - Alleinstehend (Single, verwitwet)
+    - text: Haushaltsgröße
+      help: Anzahl der im selben Haushalt wohnenden Personen, einschließlich Sie selbst
+      type: textfield
+      class: validate[required,onlyNumber,length[1,2]]
+      max: 2
+      postfix: |
+    - text: Ich verfüge über ein...
+      help: Mehrere Antworten möglich.
+      type: checklist
+      rows:
+        - Auto
+        - Motorrad
+        - Mofa, Segway
+        - Fahrrad, Roller
