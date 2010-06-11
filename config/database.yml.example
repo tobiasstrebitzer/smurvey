@@ -21,9 +21,8 @@ development:
   database: smurvey
   pool: 5
   username: root
-  password: eur0w0rld
+  password: 
   socket: /tmp/mysql.sock
-  host: 127.0.0.1
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -35,7 +34,7 @@ test:
   database: smurvey_test
   pool: 5
   username: root
-  password: *FC44ABC32051230329DF6884B4F0E1E9C6F7DC52
+  password: 
   socket: /tmp/mysql.sock
 
 production:
@@ -45,5 +44,5 @@ production:
   database: smurvey_production
   pool: 5
   username: root
-  password: *FC44ABC32051230329DF6884B4F0E1E9C6F7DC52
+  password: 
   socket: /tmp/mysql.sock
