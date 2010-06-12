@@ -10,8 +10,7 @@ class HomeController < ApplicationController
     end
     
     # Load Survey
-    @config = YAML::load(File.open("#{RAILS_ROOT}/app/fixtures/survey.yml"))
-    debugger
+    @questions = YAML::load(File.open("#{RAILS_ROOT}/app/fixtures/survey.yml"))
 
     respond_to do |format|
       format.html

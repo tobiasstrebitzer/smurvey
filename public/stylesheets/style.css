@@ -12,27 +12,20 @@ body {
 
 div#page {
 	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-	/* margin:40px auto 0px auto; */
 	margin: 20px;
 	width:900px;
-	
 	background: #FFFFFF;
-	
 }
 
-h1.header {
+div.header h2 {
 	background: none repeat scroll 0 0 #00558C;
 	margin: 0px 0px 8px 0px;
-}
-
-h1 a#logo {
-	display:block;
-	overflow:hidden;
-	color: #FFF;
-	padding: 0px 10px;
-	font-size: 0.76em;
-	line-height: 1.8em;
-	text-shadow: 0px 1px 3px #000;
+  display:block;
+  overflow:hidden;
+  color: #FFF;
+  padding: 6px 10px;
+  font-size: 1.2em;
+  text-shadow: 0px 1px 3px #000;
 }
 
 a {

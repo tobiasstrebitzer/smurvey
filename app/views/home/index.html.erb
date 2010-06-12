@@ -1,3 +1,28 @@
-<h1></h1>
-<p><%= @user.name %></p>
-<%= link_to "Benutzer", users_path %> 
+<%= link_to('Complete Test Smerf Form', smerf_form_url('testsmerf')) %>
+
+<% for i in (1..@questions.length) %>
+  <div class="survey-block">
+    <h2>Frage <%= i %>:</h2>
+    <h3><%= @questions[i]["text"] %></h3>
+    
+    <% for j in (0..@questions[i]["questions"].length-1) %>
+      <% if @questions[i]["questions"][j] %>
+        <p><%= @questions[i]["questions"][j]["text"] %></p>
+      <% end %>
+    <% end %>
+    
+  </div>
+<% end %>
+
+<% 
+#                        <?php foreach($survey_group["questions"] as $q2 => $survey_question) { 
+#                            $survey_question["q1"] = $q1;
+#                            $survey_question["q2"] = $q2+1;
+#                            if(isset($survey_group["firstwidth"])) {
+#                                $survey_question["firstwidth"] = "style='width: {$survey_group["firstwidth"]}px'";
+#                            }else{
+#                                $survey_question["firstwidth"] = "";
+#                            }
+#                            $this->load->view("questions/{$survey_question['type']}", $survey_question);
+#                        } ?>
+%>    

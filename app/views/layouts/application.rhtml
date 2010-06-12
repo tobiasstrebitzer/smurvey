@@ -11,6 +11,7 @@
         <%= stylesheet_link_tag 'table' %>
         <%= stylesheet_link_tag 'form' %>
         <%= stylesheet_link_tag 'validationEngine.jquery' %>
+        <%= stylesheet_link_tag "smerf", :cache => true  %>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
         <script src="/js/hwform.js"></script>
         <script src="/js/jquery.validationEngine-en.js"></script>
@@ -29,52 +30,34 @@
             <% end %>
             
             <div class="survey-block">
-                <p><%= yield %></p>
+                <p>
+                    F&uuml;r ein Forschungsprojekt im Rahmen des Studiengangs „Wirtschaft &amp; Management“ am MCI – Management Center Innsbruck werden die Nutzungsgewohnheiten, Wissensstand und Einstellung der Bürger zu den öffentlichen Verkehrsmitteln in Tirol erhoben.
+                </p>
+                <p>Projektleitung: Prof. FH Ing. Mag. Walter Moriel</p>
             </div>
-<% 
-#            <div class="survey-block">
-#                <p>
-#                    F&uuml;r ein Forschungsprojekt im Rahmen des Studiengangs „Wirtschaft &amp; Management“ am MCI – Management Center Innsbruck werden die Nutzungsgewohnheiten, Wissensstand und Einstellung der Bürger zu den öffentlichen Verkehrsmitteln in Tirol erhoben.
-#                </p>
-#                <p>Projektleitung: Prof. FH Ing. Mag. Walter Moriel</p>
-#            </div>
-#            
-#            <div class="survey-block">
-#                <p>
-#                    <b>Der Fragebogen ist in sieben Bl&ouml;cken aufgebaut:</b>
-#                    <ol>
-#                        <li>Erreichbarkeit wichtiger Ziele und Eignung verschiedener Verkehrsmittel</li>
-#                        <li>Bekanntheit des Angebots der öffentlichen Verkehrsmittel</li>
-#                        <li>Einstellung gegenüber den öffentlichen Verkehrsmitteln</li>
-#                        <li>Nutzung in den vergangenen acht Wochen</li>
-#                        <li>Informationsquellen</li>
-#                        <li>Gründe für geringe Nutzung</li>
-#                        <li>Den Abschluss bilden einige Angaben zur ausfüllenden Person.</li>
-#                    </ol>
-#                </p>
-#            </div>
-#            <div class="survey-block notice">
-#                Die Beantwortung der Fragen nimmt ca. 5 Minuten in Anspruch.
-#            </div>
-#            <div class="seperator"></div>
-#            <form id="mcisurvey" action="survey/submit" method="POST">
-#                <?php foreach($survey_data as $q1 => $survey_group) { ?>
-#                    <div class="survey-block">
-#                        <h2>Frage <?php echo ($q1) ; ?>:</h2>
-#                        <h3><?php echo $survey_group["text"]; ?></h3>
-#                        <?php foreach($survey_group["questions"] as $q2 => $survey_question) { 
-#                            $survey_question["q1"] = $q1;
-#                            $survey_question["q2"] = $q2+1;
-#                            if(isset($survey_group["firstwidth"])) {
-#                                $survey_question["firstwidth"] = "style='width: {$survey_group["firstwidth"]}px'";
-#                            }else{
-#                                $survey_question["firstwidth"] = "";
-#                            }
-#                            $this->load->view("questions/{$survey_question['type']}", $survey_question);
-#                        } ?>
-#                    </div>
-#                <?php } ?>
-%>    
+            
+            <div class="survey-block">
+                <p>
+                    <b>Der Fragebogen ist in sieben Bl&ouml;cken aufgebaut:</b>
+                    <ol>
+                        <li>Erreichbarkeit wichtiger Ziele und Eignung verschiedener Verkehrsmittel</li>
+                        <li>Bekanntheit des Angebots der öffentlichen Verkehrsmittel</li>
+                        <li>Einstellung gegenüber den öffentlichen Verkehrsmitteln</li>
+                        <li>Nutzung in den vergangenen acht Wochen</li>
+                        <li>Informationsquellen</li>
+                        <li>Gründe für geringe Nutzung</li>
+                        <li>Den Abschluss bilden einige Angaben zur ausfüllenden Person.</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="survey-block notice">
+                Die Beantwortung der Fragen nimmt ca. 5 Minuten in Anspruch.
+            </div>
+            <div class="seperator"></div>
+            <form id="mcisurvey" action="survey/submit" method="POST">
+                
+                <%= yield %>
+            
                 <div class="survey-block thankyou">
                     Danke für Ihre Unterstützung!
                 </div>
